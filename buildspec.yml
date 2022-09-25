@@ -13,6 +13,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - ./mvnw clean package -DskipTests
 artifacts:
   files:
     - target/ROOT.war
