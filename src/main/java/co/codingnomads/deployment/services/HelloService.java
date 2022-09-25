@@ -16,7 +16,7 @@ public class HelloService {
 
     public Hello getHello() {
         Hello hello = helloRepository.findByName("CodingNomads");
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss");
         hello.setNow(LocalDateTime.now().format(formatter));
         return hello;
     }
